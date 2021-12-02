@@ -1,0 +1,65 @@
+@media (min-width: 1200px) {
+	.col-lg-12 {
+		width: 100%; }
+	.col-lg-11 {
+		width: 91.66666667%; }
+	.col-lg-10 {
+		width: 83.33333333%; }
+	.col-lg-9 {
+		width: 75%; }
+	.col-lg-8 {
+		width: 66.66666667%; }
+	.col-lg-7 {
+		width: 58.33333333%; }
+	.col-lg-6 {
+		width: 50%; }
+	.col-lg-5 {
+		width: 41.66666667%; }
+	.col-lg-4 {
+		width: 33.33333333%; }
+	.col-lg-3 {
+		width: 25%; }
+	div.about .col-lg-6 {
+		width: 55.2%;
+		max-width: 656px;
+	}
+	.img-grid {
+		padding-bottom: 0;
+	}
+	.img-grid:nth-child(1), .img-grid:nth-child(3) {
+		padding-right: 14px;
+	}
+	.img-grid:nth-child(2), .img-grid:nth-child(4) {
+		padding-left: 14px;
+	}
+	div.experience .row {
+		display: flex;
+	}
+	.caption-wrapper {
+		bottom: 10px;
+	}
+	.caption-wrapper:nth-child(2n) {
+		left: 24px;
+		right: 38px;
+	}
+	.caption-left {
+		left: 38px !important;
+		right: 24px !important;
+	}
+	div.cv label, div.cv input, div.cv textarea {
+		display: flex;
+		flex-direction: row;
+		text-align: left;
+	}
+	div.cv .row:first-child {
+		display: flex;
+	}
+	div.cv .row:nth-child(3) {
+		width: fit-content;
+	}
+	div.cv .row:nth-child(3) .form-col {
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 84px;
+	}
+}

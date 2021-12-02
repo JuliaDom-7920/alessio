@@ -1,0 +1,570 @@
+@font-face {
+	font-family: BaronNeue;
+	src: url(/font/baron_neue.woff);
+}
+@font-face {
+	font-family: IcoMoon;
+	src: url(/font/icomoon.woff);
+}
+* {
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+}
+.container-fluid {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px; }
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+	position: relative;
+	min-height: 1px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+    margin-right: auto; }
+.col-xs-12 {
+	width: 100%; }
+.col-xs-11 {
+	width: 91.66666667%; }
+.col-xs-10 {
+	width: 83.33333333%; }
+.col-xs-9 {
+	width: 75%; }
+.col-xs-8 {
+	width: 66.66666667%; }
+.col-xs-7 {
+	width: 58.33333333%; }
+.col-xs-6 {
+	width: 50%; }
+.col-xs-5 {
+	width: 41.66666667%; }
+.col-xs-4 {
+	width: 33.33333333%; }
+.col-xs-3 {
+	width: 25%; }
+
+@-ms-viewport {
+  width: device-width; }
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+  display: none !important; }
+
+a, a#btn-open-menu span, ul, li, .section-title {
+	display: inline-block;
+}
+.caption-wrapper h5, .wrapper .header h1, .wrapper .header h2 {
+	margin: 0; 
+}
+.margin, .margin-v, .margin-h,
+h1, h2, h3, h4, h5, h6, p,
+.menu ul li, .my-name, a#btn-open-menu,
+.section, .section-title,
+.map {
+	margin: 28px;
+}
+.margin-h {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.margin-v, .section, .row, p,
+.map {
+	margin-left: 0;
+	margin-right: 0;
+}
+.padding, .section, .img-grid {
+	padding: 28px;
+}
+.center, .header, .section, .section-title, p, .caption-wrapper, .caption-wrapper h5, label, input[type="text"], textarea {
+	text-align: center;
+}
+.left {
+	text-align: left; 
+}
+.right {
+	text-align: right;
+}
+.uppercase, a.my-name, .wrapper .header h1, .section-title, .caption-wrapper h5 {
+	text-transform: uppercase;
+}
+p {
+    margin-bottom: 14px;
+    margin-top: 14px;
+	line-height: 135%; 
+}
+p, span, .caption-wrapper h5 {
+    color: #8d8d8d;
+}
+li {
+	list-style: none;
+}
+a, label .required {
+	text-decoration: none;
+	color: #edc27b;
+}
+a.magic-underlined::after {
+	content: "";
+	position: relative;
+	bottom: -2px;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #edc27b;
+	transform: scale(0, 1);
+	transform-origin: left top;
+	transition-duration: .5s;
+}
+a.magic-underlined:hover::after {
+	transform: scale(1);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+h1, h2, h3, 
+div.menu li a,
+div.menu-overlay li a,
+a.my-name {
+	letter-spacing: 2px;
+}
+h4, h5, h6 {
+    letter-spacing: 0.3px;
+}
+h1 {
+	font-size: 36px;
+}
+h2 {
+	font-size: 30px;
+}
+body {
+	font: 14px BaronNeue, sans-serif;
+}
+body, h1, h2, h3, h4, h5, h6, .caption-wrapper a, label {
+	color: #101010; 
+}
+.menu ul li a, .menu-overlay ul li a, a.my-name, .wrapper .header h1, .wrapper .header h2 {
+	color: #fff;
+}
+div.wrapper {
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	padding: 0;
+}
+.section {
+	max-width: 1480px;
+	min-height: 100%;
+	margin-left: auto;
+    margin-right: auto;
+	padding-left: 0;
+	padding-right: 0;
+}
+.full {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.section-title {
+	width: auto;
+	padding-bottom: 7px;
+	border-bottom: 6px solid #edc27b;
+}
+.img-responsive {
+	height: auto;
+	width: 100%;
+}
+.img-restrict {
+    max-width: 320px;
+}
+
+/* ----- Menu ----- */
+div.menu,
+div.menu-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	border-top: 4px solid #edc27b;
+	background: #101010;
+}
+div.menu {
+	height: 78px;
+}
+div.menu ul {
+	display: none;
+}
+div.menu li a,
+div.menu-overlay li a,
+a.my-name {
+	white-space: nowrap;
+}
+a.my-name {
+	position: absolute;
+	z-index: 2;
+}
+div.menu a.my-name {
+	top: 2px;
+	right: 0;
+}
+a#btn-open-menu {
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+a#btn-open-menu span {
+	position: relative;
+	top: 10px;
+	width: 20px;
+	height: 2px;
+	background: #fff;
+}
+a#btn-open-menu span::before,
+a#btn-open-menu span::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+}
+a#btn-open-menu span::before {
+	top: -6px;
+}
+a#btn-open-menu span::after {
+	bottom: -6px;
+}
+div.menu-overlay {
+	display: none;
+}
+div.menu-overlay ul {
+	display: flex;
+	flex-direction: column;
+}
+div.menu-overlay li a {
+	margin: 0 0 29px 0;
+	padding: 0 0 0 28px;
+}
+div.menu-overlay div {
+	width: 100%;
+	height: 76px;
+	background: #101010;
+}
+div.menu-overlay a.my-name {
+	top: 319px;
+	right: 0;
+	margin-top: 30px;
+	text-align: right;
+}
+a#btn-close-menu {
+	position: relative;
+	top: 31px;
+	left: 28px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-bottom: 54px;
+	cursor: pointer;
+}
+a#btn-close-menu span {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: 0;
+	transition: all .3s ease-in-out;
+}
+a#btn-close-menu span::before,
+a#btn-close-menu span::after {
+	content: "";
+	position: absolute;
+	top: 9px;
+	left: 0;
+	width: 20px;
+	height: 2px;
+	background: #fff;
+	transition: all .3s ease-in-out;
+}
+a#btn-close-menu span::before {
+	transform: rotate(-45deg);	
+}
+a#btn-close-menu span::after {
+	transform: rotate(45deg);
+}
+
+/* ----- Header ----- */
+div.header {
+	height: 100%;
+    min-height: 587px;
+	background: fixed url(/images/bg.jpg) center center no-repeat;
+	background-size: cover;
+}
+div.header-text-wrapper {
+    position: absolute;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+div.header h1, div.header h2 {
+	font-weight: 400;
+	text-shadow: 0 1px 1px #101010;
+}
+
+/* ----- Block About ----- */
+div.about {
+	min-height: auto;
+}
+div.about .row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* ----- Block Experience ----- */
+.img-grid {
+	box-sizing: border-box;
+}
+.caption-wrapper {
+    position: relative;
+    top: 0;
+	left: 0;
+    width: 100%;
+}
+.caption-wrapper h5 {
+	padding: 28px 0;
+}
+.caption-wrapper a, .caption-wrapper h5 {
+	font-size: 14px;
+	text-align: left;
+}
+div.experience .row .one {
+	animation-delay: .1s;
+}
+div.experience .row .two {
+	animation-delay: .4s;
+}
+div.experience .row .three {
+	animation-delay: .7s;
+}
+div.experience .row .four {
+	animation-delay: 1s;
+}
+/* ----- Block What I can do ----- */
+div.what-i-can-do .row > div {
+	width: 100%;
+	margin: 28px 0;
+}
+.icon-circled {
+	width: 104px;
+	height: 104px;
+	margin: 126px auto 28px auto;
+	font-size: 50px;
+	font-family: IcoMoon;
+    line-height: 104px;
+	color: #edc27b;
+	text-align: center;
+	background-color: #101010;
+	border: 3px solid #edc27b;
+	border-radius: 50%;
+}
+div.what-i-can-do .row div.one {
+	margin-top: 109px;
+	animation-delay: .4s;
+}
+div.what-i-can-do .row div.one::before {
+	content: "\e607";
+}
+div.what-i-can-do .row div.two {
+	animation-delay: .8s;
+}
+div.what-i-can-do .row div.two::before {
+	content: "\e604";
+}
+div.what-i-can-do .row div.three {
+	animation-delay: 1.2s;
+}
+div.what-i-can-do .row div.three::before {
+	content: "\e600";
+}
+div.what-i-can-do .row div.four {
+	animation-delay: 1.6s;
+}
+div.what-i-can-do .row div.four::before {
+	content: "\e601";
+}
+div.what-i-can-do .row div.five {
+	animation-delay: 2s;
+}
+div.what-i-can-do .row div.five::before {
+	content: "\e603";
+}
+div.what-i-can-do .row div.six {
+	animation-delay: 2.4s;
+}
+div.what-i-can-do .row div.six::before {
+	content: "\e608";
+}
+div.what-i-can-do .row p.one {
+	animation-delay: 1.2s;
+}
+div.what-i-can-do .row p.two {
+	animation-delay: 1.6s;
+}
+div.what-i-can-do .row p.three {
+	animation-delay: 2s;
+}
+div.what-i-can-do .row p.four {
+	animation-delay: 2.4s;
+}
+div.what-i-can-do .row p.five {
+	animation-delay: 2.6s;
+}
+div.what-i-can-do .row p.six {
+	animation-delay: 3s;
+}
+
+/* ----- Block Contacts ----- */
+div.map {
+	position: relative;
+}
+div.contacts .marker-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 450px;
+	background: rgb(16, 16, 16, 0.7);
+	pointer-events: none;
+}
+div.contacts .marker::before {
+	content: "A";
+	position: absolute;
+	top: calc(50% - 70px);
+	left: calc(50% - 32px);
+	display: block;
+	padding: 0 21px 6px 21px;
+	font-size: 40px;
+	font-weight: 300;
+	color: #edc27b;
+	background: #101010;
+}
+div.contacts .marker::after {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 3;
+	top: calc(50% - 15px);
+	left: calc(50% - 5px);
+	border: 5px solid transparent;
+	border-top: 10px solid #101010;
+}
+div.contacts .row div.one {
+	margin-top: 113px;
+	animation-delay: .4s;
+}
+div.contacts .row div.one::before {
+	content: "\e605";
+}
+div.contacts .row div.two {
+	margin-top: 126px;
+	animation-delay: .8s;
+}
+div.contacts .row div.two::before {
+	content: "\e60a";
+}
+div.contacts .row div.three {
+	margin-top: 124px;
+	animation-delay: 1.2s;
+}
+div.contacts .row div.three::before {
+	content: "\e609";
+}
+div.contacts .row p.one {
+	animation-delay: 1.2s;
+}
+div.contacts .row p.two {
+	animation-delay: 1.6s;
+}
+div.contacts .row p.two a {
+	animation-delay: 1.6s;
+}
+div.contacts .row p.three {
+	animation-delay: 2s;
+}
+
+/* ----- Block CV ----- */
+div.cv form input, div.cv form textarea {
+	width: 450px;
+	margin-bottom: 56px;
+	padding: 10px 0 10px 2px;
+	font: 14px BaronNeue, sans-serif;
+	font-weight: 400;
+	border: 0;
+	border-bottom: 2px solid #101010;
+}
+div.cv label {
+	display: block;
+}
+div.cv label .required {
+	display: none;
+    margin-left: 5px;
+	padding: 0 5px;
+	background: #101010;
+}
+div.cv form {
+	max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 28px;
+}
+div.cv form input:focus, div.cv form textarea:focus {
+	outline: none;
+}
+div.cv form textarea {
+	height: 95px;
+}
+div.cv form #submit {
+	position: relative;
+	cursor: pointer;
+	width: 210px;
+	height: 74px;
+	margin-top: 28px;
+	margin-left: auto;
+    margin-right: auto;
+	border: 3px solid #edc27b;
+	overflow: hidden;
+}
+div.cv form #submit input {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	width: 100%;
+	text-align: center;
+	color: #edc27b;
+	letter-spacing: 2px;
+	border-bottom: 0;
+	background-color: transparent;
+}
+div.cv form #submit::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #101010;
+	transform: skew(45deg) scale(0, 1);
+	transition-duration: .5s;
+}
+div.cv form #submit:hover::before {
+	transform: skew(45deg) scale(1);
+	
+}
